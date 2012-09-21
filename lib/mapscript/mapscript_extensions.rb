@@ -274,6 +274,12 @@ EOS
 
   end
 
+  class RectObj
+    def inspect
+      "#{super} " +  {minx: self.minx, miny: self.miny, maxx: self.maxx, maxy: self.maxy }.to_s
+    end
+  end
+
   # ResultCacheObj extensions
   class ResultCacheObj
     # Return resultCacheObj iterator
